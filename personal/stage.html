@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' file:; script-src 'self' 'unsafe-eval'; style-src 'self'; img-src 'self' file: data: blob:; media-src 'self' data: blob:; connect-src 'self' file:; worker-src blob:">
+<title>双角色桌宠</title><link rel="stylesheet" href="stage.css"></head><body>
+<div id="drag-effect" aria-hidden="true"></div>
+<header><span class="drag-handle" title="按住此处移动窗口；拖动时显示浮动边界">⠿ 拖动桌宠</span><button id="open-editor" title="打开独立编辑窗口" aria-label="打开编辑器">⚙</button><button id="quit" title="退出桌宠和编辑器" aria-label="退出桌宠">×</button></header>
+<main id="stage"><canvas id="canvas"></canvas><div id="cast"></div></main>
+<section id="conversation" aria-live="polite"></section><p id="status" hidden></p>
+<script src="../renderer/lib/live2dcubismcore.min.js"></script><script src="../renderer/lib/pixi.min.js"></script><script src="../renderer/lib/pixi-live2d-cubism4.min.js"></script><script src="playback.js"></script><script src="performance.js"></script><script src="stage.js"></script>
+</body></html>

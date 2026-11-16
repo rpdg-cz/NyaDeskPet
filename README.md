@@ -1,5 +1,7 @@
 # NyaDeskPet
 
+本 fork 新增 **Personal Duo Pet 双角色桌宠**：独立播放/编辑窗口、DeepSeek 场景创作、可离线播放的表演归档、预览与局部动作修订，以及说话/倾听/待机之间的平滑过渡。运行 `npm run personal`，详细设置见 [personal/README.md](personal/README.md)。本机导入的人物素材、密钥和生成缓存不随源码提交；使用前请按说明配置自己的两个 Live2D 模型。上游功能与许可说明保留如下。
+
 <div align="center">
   <img src="logo.png" alt="NyaDeskPet Logo" width="320"/>
   <p>基于 Live2D + AI Agent 的跨平台桌面宠物应用</p>

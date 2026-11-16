@@ -1,0 +1,212 @@
+{
+  "offline": true,
+  "llm": {
+    "baseUrl": "https://api.deepseek.com",
+    "model": "deepseek-flash",
+    "apiKeyEnv": "DEEPSEEK_API_KEY",
+    "timeoutMs": 60000
+  },
+  "tts": {
+    "enabled": false,
+    "provider": "gpt-sovits",
+    "baseUrl": "http://127.0.0.1:9880",
+    "model": "gpt-sovits-local",
+    "apiKeyEnv": "PERSONAL_PET_TTS_KEY",
+    "timeoutMs": 180000
+  },
+  "characters": [
+    {
+      "id": "companion-a",
+      "name": "角色 A",
+      "revision": 1,
+      "persona": "你是温柔、细心的桌面伙伴。人物设定尚未完成，不要编造与用户的共同经历。",
+      "modelPath": "models/live2d/018_child_casual_spring_01/018_child_casual_spring_01.model3.json",
+      "voice": "",
+      "speech": {
+        "refAudioPath": "",
+        "promptText": "",
+        "promptLang": "zh",
+        "textLang": "zh",
+        "gptWeights": "",
+        "sovitsWeights": ""
+      },
+      "actions": {
+        "idle": {
+          "expression": "exp_idle01",
+          "description": "平静待机，恢复中性表情",
+          "motion": {
+            "group": "mtn_idle01_C",
+            "index": 0
+          }
+        },
+        "happy": {
+          "expression": "exp_smile01",
+          "description": "轻微微笑，温暖回应"
+        },
+        "laugh": {
+          "expression": "exp_bsmile01",
+          "description": "较明显笑容"
+        },
+        "sad": {
+          "expression": "exp_sad01",
+          "description": "伤心失落"
+        },
+        "angry": {
+          "expression": "exp_angry01",
+          "description": "生气或不满"
+        },
+        "surprised": {
+          "expression": "exp_surprised01",
+          "description": "惊讶"
+        },
+        "thinking": {
+          "expression": "exp_thinking01",
+          "description": "思考或犹豫"
+        },
+        "shy": {
+          "expression": "exp_shy01",
+          "description": "害羞"
+        },
+        "cry": {
+          "expression": "exp_cry01",
+          "description": "哭泣"
+        },
+        "serious": {
+          "expression": "exp_serious01",
+          "description": "认真严肃"
+        },
+        "calm": {
+          "expression": "exp_idle02",
+          "description": "放松中性"
+        },
+        "pose_c": {
+          "motion": {
+            "group": "mtn_idle01_C",
+            "index": 0
+          },
+          "description": "正面身体待机，叠加指定表情"
+        },
+        "pose_l": {
+          "motion": {
+            "group": "mtn_idle01_L",
+            "index": 0
+          },
+          "description": "模型 L 方向身体待机（角度正向），叠加指定表情"
+        },
+        "pose_r": {
+          "motion": {
+            "group": "mtn_idle01_R",
+            "index": 0
+          },
+          "description": "模型 R 方向身体待机（角度负向），叠加指定表情"
+        }
+      },
+      "userPrompt": "你是温柔、细心的桌面伙伴。人物设定尚未完成，不要编造与用户的共同经历。",
+      "presentation": {
+        "expressionWeight": 0.8,
+        "laughWeight": 0.65,
+        "thinkingWeight": 0.5,
+        "maxSilentMouth": 0.25
+      }
+    },
+    {
+      "id": "companion-b",
+      "name": "角色 B",
+      "revision": 1,
+      "persona": "你是活泼、坦率的桌面伙伴。人物设定尚未完成，不要编造与用户的共同经历。",
+      "modelPath": "models/live2d/019_child_casual_spring_01/019_child_casual_spring_01.model3.json",
+      "voice": "",
+      "speech": {
+        "refAudioPath": "",
+        "promptText": "",
+        "promptLang": "zh",
+        "textLang": "zh",
+        "gptWeights": "",
+        "sovitsWeights": ""
+      },
+      "actions": {
+        "idle": {
+          "expression": "exp_idle01",
+          "description": "平静待机，恢复中性表情",
+          "motion": {
+            "group": "mtn_idle01_C",
+            "index": 0
+          }
+        },
+        "happy": {
+          "expression": "exp_smile01",
+          "description": "轻微微笑，温暖回应"
+        },
+        "laugh": {
+          "expression": "exp_bsmile01",
+          "description": "较明显笑容"
+        },
+        "sad": {
+          "expression": "exp_sad01",
+          "description": "伤心失落"
+        },
+        "angry": {
+          "expression": "exp_angry01",
+          "description": "生气或不满"
+        },
+        "surprised": {
+          "expression": "exp_surprised01",
+          "description": "惊讶"
+        },
+        "thinking": {
+          "expression": "exp_thinking01",
+          "description": "思考或犹豫"
+        },
+        "shy": {
+          "expression": "exp_shy01",
+          "description": "害羞"
+        },
+        "cry": {
+          "expression": "exp_cry01",
+          "description": "哭泣"
+        },
+        "serious": {
+          "expression": "exp_serious01",
+          "description": "认真严肃"
+        },
+        "calm": {
+          "expression": "exp_idle02",
+          "description": "放松中性"
+        },
+        "pose_c": {
+          "motion": {
+            "group": "mtn_idle01_C",
+            "index": 0
+          },
+          "description": "正面身体待机，叠加指定表情"
+        },
+        "pose_l": {
+          "motion": {
+            "group": "mtn_idle01_L",
+            "index": 0
+          },
+          "description": "模型 L 方向身体待机（角度正向），叠加指定表情"
+        },
+        "pose_r": {
+          "motion": {
+            "group": "mtn_idle01_R",
+            "index": 0
+          },
+          "description": "模型 R 方向身体待机（角度负向），叠加指定表情"
+        }
+      },
+      "userPrompt": "你是活泼、坦率的桌面伙伴。人物设定尚未完成，不要编造与用户的共同经历。",
+      "presentation": {
+        "expressionWeight": 0.65,
+        "laughWeight": 0.45,
+        "thinkingWeight": 0.45,
+        "maxSilentMouth": 0.2
+      }
+    }
+  ],
+  "playback": {
+    "enabled": true,
+    "intervalSeconds": 60,
+    "clickEnabled": true
+  }
+}

@@ -22,7 +22,10 @@
     "check-live2d": "node scripts/check-live2d.js",
     "migrate-logger": "node scripts/migrate-console-to-logger.js",
     "migrate-logger:preview": "node scripts/migrate-console-to-logger.js --dry-run",
-    "version": "node scripts/update-version.js"
+    "version": "node scripts/update-version.js",
+    "personal": "electron personal/main.cjs",
+    "personal:test": "node --test personal/authoring.test.cjs personal/playback.test.cjs personal/model-sequence.test.cjs personal/stage-action.test.cjs personal/review.test.cjs personal/archive.test.cjs personal/revision.test.cjs personal/performance.test.cjs",
+    "personal:verify": "electron personal/main.cjs --smoke"
   },
   "keywords": [
     "electron",

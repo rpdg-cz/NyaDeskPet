@@ -26,3 +26,18 @@ renderer/js/*.js.map
 models/live2d/*/
 models/asr/*/
 !models/live2d/mao_pro_zh/
+
+# Local dependency cache
+.npm-cache/
+
+.electron-cache/
+
+.preview/
+
+# Local credentials and generated verification reports
+.env
+.env.*
+!.env.example
+deepseekapi.txt
+*-key.enc
+personal/reports/

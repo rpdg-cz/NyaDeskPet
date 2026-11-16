@@ -1,0 +1,53 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'">
+<title>双角色桌宠 · 编辑器</title><link rel="stylesheet" href="editor.css"></head><body>
+<header><button id="quit" class="quit">退出桌宠</button><h1>创作工作台</h1><p>角色、对话与表演在这里编辑；桌面只显示桌宠。</p></header>
+  <section id="controls">
+  <div class="library">
+    <label><input type="checkbox" id="offline" checked>离线播放</label>
+    <select id="scene-list" aria-label="本地对话库"></select>
+    <button id="play">播放</button><button id="stop">停止</button>
+    <button id="open-characters">角色对象</button><button id="open-folder">缓存目录</button>
+  </div>
+  <details id="preview-panel" open><summary>场景预览与局部修改</summary>
+    <div class="library"><button id="preview-scene">预览草稿</button><button id="publish-scene">确认并加入轮播</button><button id="capture-layout">保存预览中坐标</button></div>
+    <p id="archive-info" class="hint"></p>
+    <label class="field">修改哪一句<select id="edit-line"></select></label><button id="preview-line">预览选中台词</button>
+    <div class="library"><label>起始 ms <input id="edit-start" type="number" value="0" min="0" max="6000"></label><label>结束 ms <input id="edit-end" type="number" value="6000" min="0" max="6000"></label></div>
+    <pre id="selected-timeline" class="hint"></pre>
+    <label class="field">预览反馈<textarea id="edit-feedback" rows="2" placeholder="例如：这句只是平静提醒，不要向左偏头和摇晃，保留微笑。"></textarea></label>
+    <button id="revise-scene">定位片段并让 LLM 修改</button>
+    <details><summary>本次工具解析与修改 Prompt</summary><pre id="revision-prompt"></pre></details>
+  </details>
+  <p id="playback-state" class="hint" role="status">正在读取桌宠播放状态…</p>
+  <details class="playback-settings"><summary>播放设置</summary>
+    <form id="playback-form">
+      <label class="field"><span><input id="scheduled-playback" type="checkbox" checked>有缓存时定时轮播</span></label>
+      <label class="field">场景播放完后等待（秒）<input id="playback-interval" type="number" min="5" max="86400" step="1" value="60" required></label>
+      <label class="field"><span><input id="click-playback" type="checkbox" checked>点击角色异步触发本地对话</span></label>
+      <p class="hint">优先轮播已生成的本地缓存，没有缓存时使用内置示例。点击角色会立即切换对话；拖动不会触发。</p>
+      <button type="submit">保存播放设置</button>
+    </form>
+  </details>
+  <section id="studio" hidden>
+    <details class="api-settings"><summary>DeepSeek 连接设置</summary><div class="credentials"><input id="api-key" type="password" autocomplete="off" placeholder="DeepSeek API Key（加密保存在本机）" aria-label="DeepSeek API Key"><button id="save-key">保存到本机</button><span id="key-status"></span></div></details>
+    <label class="field">创作方式<select id="authoring-mode"><option value="characters">按角色 Prompt 创作</option><option value="import">导入对话，API 编排动作</option></select></label>
+    <section id="import-panel" hidden>
+      <label class="field">导入 TXT / JSON<input id="dialogue-file" type="file" accept=".txt,.json,text/plain,application/json"></label>
+      <label class="field">对话原文<textarea id="dialogue-source" rows="5" maxlength="40000" placeholder="角色 A：雨好像停了。&#10;角色 B：那我们一起去看彩虹吧。"></textarea></label>
+      <p class="hint">每行「角色名：台词」，或 JSON 数组。原台词、说话人与顺序保持不变。</p>
+    </section>
+    <form id="prompt-form"><input id="prompt" maxlength="4000" placeholder="场景要求 / 表演要求，如：温馨轻松，动作克制" aria-label="场景创作要求" required><button id="send">制作并缓存</button></form>
+  </section>
+  <p id="status" role="status">编辑窗口：制作与管理场景，播放会显示在桌面桌宠中。</p>
+  </section>
+  <dialog id="character-editor">
+    <form id="characters-form">
+      <h2>角色对象</h2>
+      <p class="hint">每个角色单独维护 User Prompt，可填写性格、关系、说话习惯和希望出现的情节。ID 用于导入对话和动作路由。</p>
+      <div id="character-fields"></div>
+      <p id="character-status" role="status"></p>
+      <div class="editor-buttons"><button type="button" id="cancel-characters">取消</button><button type="submit">保存角色</button></div>
+    </form>
+  </dialog>
+<script src="editor.js"></script></body></html>

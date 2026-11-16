@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+:root { font-family: 'Microsoft YaHei', system-ui, sans-serif; color: #343243; background: #faf9f6; font-size: 14px; }
+body { margin: 0 auto; padding: 16px; max-width: 600px; }
+[hidden] { display: none !important; }
+h1 { font-size: 22px; margin: 0 0 8px; } header p, .hint { color: #746d79; font-size: 12px; }
+button,input,select,textarea { font: inherit; padding: 9px 12px; border: 1px solid #d8d1dd; border-radius: 8px; color: inherit; background: #fff; }
+button { cursor: pointer; } button:disabled { opacity: .5; }
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible { outline: 2px solid #8b7498; outline-offset: 2px; }
+.library, .credentials { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 12px 0; }
+.library { border-bottom: 1px solid #e5e0e8; }.library select { flex: 1; min-width: 200px; }
+.library label { display: inline-flex; align-items: center; white-space: nowrap; }
+.credentials input { flex: 1; min-width: 200px; }
+.field { display: flex; flex-direction: column; gap: 8px; margin: 14px 0; }
+textarea { width: 100%; resize: vertical; min-height: 80px; }
+#prompt-form { display: flex; gap: 8px; } #prompt { flex: 1; min-width: 80px; }
+#send { background: #786a83; color: white; }
+#status { color: #746d79; font-size: 12px; line-height: 1.8; }
+dialog { width: min(540px, 94vw); max-height: 85vh; border: none; border-radius: 14px; background: #faf9f6; padding: 24px; color: inherit; }
+dialog::backdrop { background: #25203333; }
+fieldset { border: 1px solid #ddd4e0; border-radius: 10px; margin: 12px 0; padding: 12px; }
+.editor-buttons { display: flex; justify-content: flex-end; gap: 10px; } #character-status { color: #a04444; }
+
+details { margin: 12px 0; } summary { cursor: pointer; color: #786a83; }
+
+.quit { float: right; font-size: 12px; color: #a04444; }
+.library select { min-width: 180px; max-width: 100%; }
+#prompt-form { flex-wrap: wrap; }
+
+pre {white-space:pre-wrap;overflow-wrap:anywhere;max-height:160px;overflow:auto;} .library input[type=number]{width:95px;}

@@ -1,0 +1,14 @@
+{
+  "雨天闲聊": [
+    {"characterId":"companion-a","text":"外面好像下雨了，今天适合安静待着。","emotion":"calm","action":"idle"},
+    {"characterId":"companion-b","text":"那我来挑音乐，你负责泡茶，怎么样？","emotion":"happy","action":"idle"},
+    {"characterId":"companion-a","text":"好呀，别挑太吵的就行。","emotion":"happy","action":"idle"},
+    {"characterId":"companion-b","text":"放心，这回一定是轻音乐。","emotion":"happy","action":"idle"}
+  ],
+  "睡前小剧场": [
+    {"characterId":"companion-a","text":"已经这么晚了，你怎么还这么精神？","emotion":"calm","action":"idle"},
+    {"characterId":"companion-b","text":"我在数今天完成了多少件小事！","emotion":"happy","action":"idle"},
+    {"characterId":"companion-a","text":"那把最后一件留给好好休息吧。","emotion":"happy","action":"idle"},
+    {"characterId":"companion-b","text":"好，明天再继续冒险。晚安。","emotion":"calm","action":"idle"}
+  ]
+}
